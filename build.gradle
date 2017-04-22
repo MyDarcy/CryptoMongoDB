@@ -7,10 +7,15 @@ apply plugin: 'idea'
 targetCompatibility = 1.8
 sourceCompatibility = 1.8
 
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 repositories {
-    mavenCentral()
+//    mavenCentral()
     jcenter()
     mavenLocal()
+
 
 }
 
@@ -28,7 +33,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto
     compile group: 'org.springframework.security', name: 'spring-security-crypto', version: '4.2.2.RELEASE'
 
-    // https://mvnrepository.com/artifact/crypto-random/crypto-random
-    compile group: 'crypto-random', name: 'crypto-random', version: '1.2.0'
+
+
+
 
 }
